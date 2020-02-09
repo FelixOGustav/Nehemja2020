@@ -10,6 +10,12 @@
     src: url(../Fonts/Elkwood.otf);
 }
 
+@font-face {
+    font-family: "Peace_Sans";
+    src: url(../Fonts/Peace_Sans_Webfont.ttf);
+    src: url(../Fonts/Peace_Sans.otf);
+}
+
 p {
     font-family: ChampagneLimousines;
     font-weight: bold;
@@ -34,8 +40,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Elkwood;
-    color: #606569;
+    font-family: Peace_Sans;
+    color: #000000;
 }
 
 .greyColor {

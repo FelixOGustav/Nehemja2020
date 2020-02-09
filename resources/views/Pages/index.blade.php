@@ -79,7 +79,7 @@
             <div class="landingContentContainer">
                 <!-- Logo btns -->
                 <div class="logoTxt hideOnMobile">
-                    <h1 style="text-shadow: 0px 0px 11px #bcbcbc78;">{{$camp->name}}</h1>
+                    <h1>{{$camp->name}}</h1>
                 </div>
                 <!-- Logo btns -->
                 
