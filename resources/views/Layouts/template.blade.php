@@ -60,43 +60,12 @@
     </div>
     <!-- Loading content  end-->
 
-    {{-- Navbar 
-    <div class="navbar navbar-expand-lg navbar-light navbarBG fixed-top navbar-custom">
-        <div>
-            <a class="navbar-brand"  id="scrollToTopLogo" href="{{$links['navLogoLink'] ?? '/'}}"><img src="{{URL::asset('img/branaslagret.svg')}}" height="40" class="d-inline-block align-top"></a>
-        </div>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarBasic">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom ElkwoodNavbar navbarItemSpacing" href="{{$links['infoLink'] ?? "/#branaslagretInfo"}}" id="scrollToBranaslagretBtn">Branäslägret?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom ElkwoodNavbar navbarItemSpacing" href="{{$links['prisLink'] ?? "/#prisInfo"}}" id="scrollToPrisBtn">Pris <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom ElkwoodNavbar navbarItemSpacing" href="{{$links['reglerLink'] ?? "/#ReglerInfo"}}" id="scrollToReglerBtn">Regler</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom ElkwoodNavbar navbarItemSpacing" href="{{$links['faqLink'] ?? "/#faqInfo"}}" id="scrollTofaqBtn">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom ElkwoodNavbar navbarItemSpacing" href="{{$links['kontaktLink'] ?? "/#KontaktInfo"}}" id="scrollToKontaktBtn">Kontakt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
---}}
-    <!-- Navbar end -->
-
     <!-- Main Site Content -->
     <div class="wrapper" style="color: white;">
         <!-- Sidebar -->
         <div id="sidebar" class="hidden" style="overflow-y: auto;">
             <div class="sidebarName">
-                <a href="{{$links['navLogoLink'] ?? '/'}}" class="scrollToTop">EXPLORE</a>
+                <a href="{{$links['navLogoLink'] ?? '/'}}" class="scrollToTop">NEHEMJA 2020</a>
             </div>
 
             <!-- Menu navigation buttons -->
@@ -142,8 +111,7 @@
             </div>
 
             <div class="toplogo" id="scrollToTopLogo" class="scrollToTop">
-                <h1>EXPLORE</h1>
-                <p>2019</p>
+                <h1>Nehemja 2020</h1>
             </div>
             
             <!-- Main site content -->

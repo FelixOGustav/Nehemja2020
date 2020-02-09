@@ -1,6 +1,13 @@
 @extends('Layouts/template')
 @section('content')
 <div>
+    <!-- TODO This error display is ugly AF.. -->
+    @if($errors->any())
+        @foreach ($errors->all() as $error)
+            <li style="color: black;">{{$error}}</li> 
+        @endforeach
+    @endif
+
     @if($key)
     <form method="POST" action="/registration/{{$key}}/done">
     @else
