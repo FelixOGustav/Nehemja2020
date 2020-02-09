@@ -1,0 +1,308 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    position:relative;
+}
+
+.sidebarName {
+    margin: 30px 10px 30px 10px;
+}
+
+#sidebar {
+    background-color: #466073;
+    position: fixed;
+    /*top: 0px;
+    left: 0px;*/
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    transition: all 0.3s;
+    -webkit-box-shadow: inset -12px 0px 18px -13px rgba(0,0,0,0.73);
+    -moz-box-shadow: inset -12px 0px 18px -13px rgba(0,0,0,0.73);
+    box-shadow: inset -12px 0px 18px -13px rgba(0,0,0,0.73);
+}
+
+#sidebar.hidden {
+    margin-left: -250px; /* Same as width of sidebar */
+}
+
+#sidebar a{
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: #e6ebee;
+}
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    overflow: hidden;
+    margin-left: 250px;
+}
+
+#content.hidden {
+    min-width: 100%;
+    margin-left: 0px;
+}
+
+.contentcontainer {
+    padding: 40px 40px 40px 40px;
+    /* Needed offset for topbar bg to be visible */
+    margin-top: -62px;
+    padding-top: 62px; /*calc(62px + 40px); 62px is topbar height and 40px is content padding */
+}
+
+
+
+.sidebarName h4 {
+    color: white;
+    text-align: center;
+}
+
+.topBar {
+    background-color: #f5f5f5;
+    padding: 7px 15px;
+    z-index: 9999;
+    border-bottom: 1px solid #cdd4d8;
+    white-space: nowrap;
+}
+
+.topBar a {
+    font-family: Elkwood;
+    font-size: 30px;
+    text-decoration: none;
+    color: #606569;
+}
+
+
+@media screen and (max-width: 769px){
+    .contentcontainer {
+        padding-left: 10px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+        /*padding-top:  calc(62px + 10px);  62px is topbar height and 40px is content padding */
+    }
+
+    .contentcontainer.hidden {
+        padding-right: 10px;
+    }
+}
+
+.sidebarbutton {
+    list-style: none;
+    font-size: 17px;
+    padding: 10px 0px 10px 7px;
+    /*border-color: #606569;*/
+    border-style: solid;
+    border-width: 0px 0px 0px 5px;
+    border-color: #466071;
+}
+
+.registrationssubmenu .sidebarbutton {
+    border-color: #618299;
+    font-size: 13px
+}
+
+.sidebarbutton:hover {
+    background-color: #31424e;
+    border-left-color: #d8a416;
+}
+
+.sidebarbutton i {
+    margin-left: 5px;
+    min-width: 30px;
+}
+
+.sidebarbutton a {
+    margin-left: 5px;
+}
+
+.sidebarbutton button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebarbutton button:focus {
+    outline: none !important;
+}
+
+.sidebarmenuline {
+    border: 1px solid #7a7f84;
+}
+
+.registrationscountcard {
+    width: 250px;
+    padding: 15px;
+    margin: 35px;
+    border-radius: 2px;
+}
+
+.registrationscountcard h1, .registrationscountcard h2, .registrationscountcard h4 {
+    color: white;
+}
+
+.participant {
+    background-color: #FFA160;
+}
+
+.leader {
+    background-color: #60cce7;
+}
+
+.statisticscardstable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statisticscardicon {
+    font-size: 75px;
+}
+
+.registrationssubmenu {
+    background-color: #618299;
+}
+
+.logoutbtn {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 250px; /* Same as sidebar width */ 
+    padding-bottom: 13px;
+}
+
+#sidebarshowbtn {
+    color: #606569;
+    font-size: 30px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.panel {
+    background-color: white;
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 769px) {
+    .panel {
+        margin-top: 10px;
+    }
+}
+
+.tableheader {
+    background-color: #606569;
+}
+
+.tblheadcol:first-child {
+    -webkit-border-top-left-radius: 6px;
+    border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+}
+
+.tblheadcol:last-child {
+    -webkit-border-top-right-radius: 6px;
+    border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+}
+
+input, textarea, select {    
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 5px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  font-family: ChampagneLimousines;
+  font-size: 20px;
+  color: #606569;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(61, 61, 61, 0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.dynatable-search {
+    color: #606569;
+}
+
+.dynatable-search input {
+    width: 250px;
+}
+
+.sidescrollcontent {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tbl-firstname {
+    display: block;
+}
+
+.dateSelectBtn.active {
+    background-color: #606569 !important;
+    color: white !important;
+}
+
+#regtbl_wrapper button {
+    font-family: ChampagneLimousines;
+    font-size: 15px;
+    color: white;
+    background-image: none !important;
+    background-color: #FFA160 !important;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+#regtbl_wrapper button:hover {
+    background-color: rgb(206, 124, 66) !important;
+}
+
+.buttons-columnVisibility {
+    text-align: left;
+}
+
+#regtbl_wrapper .buttons-columnVisibility i {
+    /*display: none;*/
+    opacity: 0;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -ms-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+}
+
+#regtbl_wrapper .buttons-columnVisibility.active i {
+    /*display: inline-block;*/
+    opacity: 1;
+}
+
+.newActivityPanel {
+    background-color: #dadada;
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,121 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    /*display: flex;
+    align-items: stretch;
+    position:relative;
+    */
+}
+
+.sidebarName {
+    margin: 30px 10px 30px 10px;
+    text-align: center;
+}
+
+#sidebar {
+    z-index: 90;
+    top: 0;
+    left: 0;
+    background-color: #EBEBEB;
+    position: fixed;
+    /*top: 0px;
+    left: 0px;*/
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    transition: all 0.3s;
+    -webkit-box-shadow: inset -12px 0px 18px -13px rgba(0, 0, 0, 0.144);
+    -moz-box-shadow: inset -12px 0px 18px -13px rgba(0,0,0,0.144);
+    box-shadow: inset -12px 0px 18px -13px rgba(0,0,0,0.144);
+}
+
+#sidebar.hidden {
+    margin-left: -250px; /* Same as width of sidebar */
+}
+
+#sidebar a{
+    color: #606569;
+    text-decoration: none;
+}
+
+.sidebarName a {
+    font-size: 35px;
+    font-family: Elkwood;
+    color: #606569;
+    text-align: center;
+}
+
+.topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.topBar.hidden{
+    left: 190px;
+}
+
+/*
+@media screen and (max-width: 769px){
+    .contentcontainer {
+        padding-left: 10px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+        padding-top:  calc(62px + 10px);  62px is topbar height and 40px is content padding 
+    }
+
+    .contentcontainer.hidden {
+        padding-right: 10px;
+    }
+}
+*/
+.sidebarbutton {
+    list-style: none;
+    font-size: 25px;
+    font-family: ChampagneLimousines;
+    padding: 10px 0px 10px 7px;
+    /*border-color: #606569;*/
+    border-style: solid;
+    border-width: 0px 0px 0px 5px;
+    border-color: #EBEBEB;
+}
+
+.sidebarbutton:hover {
+    background-color: rgb(201, 200, 200);
+    border-left-color: #EAC15B;
+}
+
+.sidebarbutton i {
+    margin-left: 5px;
+    min-width: 30px;
+}
+
+.sidebarbutton a {
+    margin-left: 5px;
+}
+
+.sidebarbutton button {
+    background-color: #60656900;
+    border: none;
+    padding: 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebarbutton button:focus {
+    outline: none !important;
+}
+
+.sidebarmenuline {
+    border: 1px solid white;
+}
+
+#sidebarshowbtn {
+    color: #606569;
+    font-size: 30px;
+    margin-right: 50px;
+    cursor: pointer;
+}

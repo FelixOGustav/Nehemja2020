@@ -1,0 +1,706 @@
+:root {
+    background-color: #EBEBEB
+}
+.mainBG{
+    background-color: #EBEBEB;
+}
+
+.noPadding {
+    padding: 0px;
+}
+
+
+.bigLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    margin-bottom: -10px;
+}
+
+.dateLogo {    
+    color: #606569;
+    font-size: 40px;
+    margin-top: -25px;
+    text-align: center;
+}
+
+.dropShadow {
+    box-shadow: 0px 5px 15px #464444ab;
+}
+
+.BGTransparent {
+    background-color: #ffffffe3;
+}
+
+.buttonStyle {
+    background: none;
+    border: none;
+    /*padding: 10px 25px 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;*/
+    cursor: pointer;
+}
+
+.buttonStyle p {
+    color: white;
+    font-family: Elkwood;
+    font-size: 70px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.startPageInfo {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 992px){
+    .startPageInfo {
+        margin-top: 80px;
+        padding-left: 12%;
+    }
+}
+
+@media (max-width: 991.98px){
+    .startPageInfo h1 {
+        font-size: 33px;
+    }
+
+    .startPageInfo h3 {
+        font-size: 23px;
+    }
+}
+
+.modal-content {
+    border-radius: 0px;
+    border: none;
+}
+/*
+.modal {
+    width: 50%;
+}
+*/
+
+.modalButtonStyle {
+    margin: 0px 15px;
+    background-color: #606569;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.modalButtonStyle h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the right */
+    z-index: 998; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(255, 255, 255, 0.897); /* Set a background color */
+    color: #606569; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 30px; /* Rounded corners */
+    font-family: ChampagneLimousines;
+    font-size: 18px; /* Increase font size */
+}
+
+.BGGrey {
+    background-color: #606569;
+}
+
+.centerTextInDiv {
+    text-align: center;
+}
+
+.invisibleSpacer {
+    min-height: 500px;
+}
+
+.paddingBottom {
+    padding-bottom: 100px;
+}
+
+.paddingTop{
+    padding-top: 100px;
+}
+
+.qnaBox {
+    margin: 8px 20px;
+    min-width: 80%;
+}
+
+.qnaBound {
+    width: 44.5%;
+    margin: 48px;
+    padding: 0px;
+}
+
+.qnaBtnSize{
+    min-width: 450px;
+}
+
+
+@media (max-width: 991.98px){
+    .qnaBound {
+        width: 100%;
+        /*margin: 0px;*/
+        padding: 0px;
+    }
+
+    .qnaBtnSize{
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #scrollToTopBtn:hover{
+        background-color: #d8d8d8e3; /* Add a dark-grey background on hover */
+    }
+}
+
+.spacingForms {
+    margin-top: 18px;
+}
+
+label {
+    font-family: ChampagneLimousines;
+    font-weight: bold;
+}
+
+.centerImg {
+    display: block;  
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+@media screen and (max-height: 890px){
+    .ScaleStartPageLogo {
+        -ms-transform: scale(0.6,0.6); /* IE 9 */
+        -webkit-transform: scale(0.6,0.6); /* Safari */
+        transform: scale(0.6,0.6); /* Standard syntax */
+        padding-bottom: 0px;
+        margin-bottom: -100px;
+    }
+}
+
+.LoginContainer{
+    background-color: #54595de0;
+    margin: 100px auto;
+    max-width: 450px;
+    padding: 50px 0px;
+}
+
+.loginBox {
+    margin-left:auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+.loginField {
+    width: 90%;
+    height: 40px;
+    margin: 15px;
+    font-family: ChampagneLimousines;
+}
+
+.loadingBG {
+    position: fixed;
+    z-index: 9996;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #EAC15B;
+}
+
+.loadingContent {
+    height: 140px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px; /* Half the width*/
+    margin-top: -70px; /* Half the height*/
+    color: white;
+}
+
+.loadingContent img {
+    width: 100px;
+    height: 100px;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 3s linear infinite;
+    -moz-animation: rotating 3s linear infinite;
+    -ms-animation: rotating 3s linear infinite;
+    -o-animation: rotating 3s linear infinite;
+    animation: rotating 3s linear infinite;
+  }
+
+.cookiestyle {
+    width: 100%;
+    background-color: #606569;
+    color: white;
+    padding: 10px;
+}
+
+.adminContainer {
+    display: flex;    
+}
+
+.sidebarContainer {
+    width: 200px;
+    background-color: #606569;
+    margin-right: 10px;
+    margin-bottom: auto;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 991.98px){
+    .adminContainer {
+        display: block;
+    }   
+    .sidebarContainer {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+
+.sidebarContainer a {
+    color:white;
+    text-decoration: none;
+    font-family: ChampagneLimousines;
+    font-size: 17px;
+}
+
+.sidebarContainer a:hover {
+    color:white;
+    text-decoration: none;
+    background-color: #ffffffb4;
+}
+
+.adminContent {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    min-height: 1000px;
+    margin-top: 20px;
+}
+
+.adminNavBlock {
+    display: block;
+    padding: 5px;
+}
+
+.adminNavLine {
+    margin: 0px 5px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+form label {
+    font-size: 20px;
+    color: #606569;
+}
+
+.anmalan {
+    font-size:90px;
+}
+
+.rubrikerAnmalan {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 991.98px){
+    form label {
+        font-size: 15px;
+    }
+
+    .anmalan {
+        font-size:50px;
+    }
+    
+    .rubrikerAnmalan {
+        font-size: 30px;
+    }
+}
+
+.centerEditButton {
+    vertical-align: middle;
+}
+
+.table th {
+    vertical-align: middle;
+    max-height: 62px;
+}
+
+
+
+.brightenOnHover:hover {
+    filter: opacity(80%);
+    -webkit-filter: opacity(80%);
+}
+
+
+
+
+
+
+/* Explore start page info content stuff */
+
+.ContentRow {
+    background-color: #EBEBEB;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    background-color: #EBEBEB;
+    max-height: 600px;
+}
+
+.containerItem {
+    width: 50%;
+    margin: 0px;
+    /*flex-grow: 1;*/
+}
+
+.contentImg {
+    /*width: 50vw;*/
+    height: inherit;
+    overflow: hidden;
+}
+
+.contentImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentTxt {
+    padding: 3rem;
+    font-family: ChampagneLimousines;
+    color: #606569;
+}
+
+.contentTxt h2 {
+    font-family: Elkwood;
+    font-size: 60px;
+}
+
+.contentTxt p {
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+@media (max-width: 991.98px){
+    .containerItem{
+        width: 100%;
+        order: 1;
+    }
+
+    .contentImg {
+        width: 100vw;
+    }
+
+    .contentContainer {
+        max-height: 1200px;
+    }
+
+    .contentContainer {
+        flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+    }
+
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+
+.landingDiv {
+    background: url('../img/grass_sunset.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.landingDiv .landingContentContainer {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    /*width: 100vw;*/
+}
+
+.landingDiv .logoTxt h1 {
+    text-align: center;
+    color: white;
+    margin-top: calc(50vh - 200px);
+    font-size: 200px;
+}
+
+.landingInfo {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+}
+
+.landingInfo div {
+    width: 50vw;
+}
+
+.landingInfo div p{
+    color: white;
+    font-family: Elkwood;
+    font-size: 70px;
+    font-weight: normal;
+    margin: 0px;
+    text-align: center;
+}
+
+@media (max-width: 991.98px){
+    
+    .landingInfo div p {
+        font-size: 40px;
+    }
+
+    .landingInfo {
+        position: absolute;
+        bottom: 100px;
+        /*margin-top: 200px;*/
+    }
+}
+
+.chevron {
+    position: relative;
+    text-align: center;
+    /*padding: 2px;*/
+    margin-bottom: 6px;
+    height: 8px;
+    width: 100px;
+    cursor: pointer;
+}
+.chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: rgb(255, 255, 255);
+    /*transform: skew(0deg, 20deg);*/
+    transform: rotate(20deg);
+    transform-origin: bottom right;
+}
+.chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: rgb(255, 255, 255);
+    /*transform: skew(0deg, -20deg);*/
+    transform: rotate(-20deg);
+    transform-origin: bottom left;
+}
+
+.chevronContainer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.chevronContainer .chevron {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    padding-top: calc(1rem + 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    z-index: 200;
+    background: red;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.hamburger > div:after,
+.hamburger > div:before {
+    content: '';
+    position: absolute;
+    z-index: 200;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.hamburger > div:before {
+    top: 10px;
+    height: 0px;
+}
+
+.topBar.hidden > #sidebarshowbtn > .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.topBar.hidden > #sidebarshowbtn > .hamburger > div:after,
+.topBar.hidden > #sidebarshowbtn > .hamburger > div:before {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.topBar.hidden > #sidebarshowbtn > .hamburger:hover > div {
+    transform: rotate(225deg);
+}
+
+.toplogo {
+    z-index: 10;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    box-shadow: 0px 3px 6px #00000016;
+    text-align: center;
+}
+
+.toplogo > h1 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+
+.toplogo > p {
+    font-family: Elkwood;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin-top: -3px;
+}
+
+@media (min-width: 992px){
+    .toplogo {
+        display: none;
+    }
+}
+
+.inlineImgBanner {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inlineImgBanner > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faqTitle {
+    font-family: ChampagneLimousines;
+    font-size: 35px;
+    color: #606569;
+    margin-bottom: 25px;
+}
+
+.faqBody {
+    font-family: ChampagneLimousines;
+    font-weight: smaller;
+    font-size: 25px;
+    color: #606569;
+}
+
+#KontaktInfo h2 {
+    font-size: 42px;
+}
+
+.qnaRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.linkHover:hover {
+    text-decoration: underline white;
+}
+
+.datapolicy h2 {
+    margin-top: 40px;
+}
