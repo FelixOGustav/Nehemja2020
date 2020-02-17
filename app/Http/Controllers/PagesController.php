@@ -496,6 +496,21 @@ class PagesController extends Controller
         $contact = \App\contact::find($id);
         return view('AdminPages/editcontact', ['contact' => $contact]);
     }
+
+    public function EditRegistration($id){
+
+        $kars = \App\kar::where('camp_id', $id)
+                        ->orderBy('name', 'desc')
+                        ->get();
+        
+        $patrulls = \App\patrull::where('camp_id', $id)
+                        ->orderBy('name', 'desc')
+                        ->get();
+
+        return view('AdminPages/editregistrationform', ['kars' => $kars,
+                                                        'patrulls' => $patrulls
+                                                        ]);
+    }
 }
 
 class PlacesStats {

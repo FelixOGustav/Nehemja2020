@@ -129,7 +129,7 @@
             </div>
 
             <div class="col" style="margin-top: auto; margin-bottom: auto; text-align: center">
-                <a><h2 style=" font-size: 25;" class="footerLogo scaleFooterLogoToMobile">EXPLORE</h2></a>
+                <a><h2 style=" font-size: 25;" class="footerLogo scaleFooterLogoToMobile">NEHEMJA2020</h2></a>
                 <p class="footerRights scaleFooterRightsToMobile">© Equmenia Väst</p>
             </div>
             <div  class="col" style="margin-top: auto; margin-bottom: auto; text-align: center">
