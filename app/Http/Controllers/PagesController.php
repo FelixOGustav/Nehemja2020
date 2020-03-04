@@ -67,7 +67,8 @@ class PagesController extends Controller
 
         $placesIDArray = [];
         $user = Auth::user();
-        $places = \App\place::all();
+        $patrulls = \App\patrull::all();
+        $kars = \App\kar::all();
 
         if($user->can('ljung')){
             $placesIDArray[] = \App\place::where('placename', '=', 'Ljung')->first()->placeID;
@@ -119,7 +120,7 @@ class PagesController extends Controller
                 $regAmount = \App\registration::count();
                 $registrations = \App\registration::whereIn('place', $placesIDArray)->get();
             }
-            return view('AdminPages/registrationlists', ['registrations' => $registrations, 'places' => $places, 'count' => $regAmount, 'type' => $type, 'cancelled' => $cancelled]);
+            return view('AdminPages/registrationlists', ['registrations' => $registrations, 'patrulls' => $patrulls, 'kars' => $kars, 'count' => $regAmount, 'type' => $type, 'cancelled' => $cancelled]);
         }else if($type == 'leader'){
             if($cancelled == "cancelled"){
                 $regAmount = \App\registrations_leaders_cancel::count();
@@ -495,21 +496,6 @@ class PagesController extends Controller
     public function EditStartContact($id){
         $contact = \App\contact::find($id);
         return view('AdminPages/editcontact', ['contact' => $contact]);
-    }
-
-    public function EditRegistration($id){
-
-        $kars = \App\kar::where('camp_id', $id)
-                        ->orderBy('name', 'desc')
-                        ->get();
-        
-        $patrulls = \App\patrull::where('camp_id', $id)
-                        ->orderBy('name', 'desc')
-                        ->get();
-
-        return view('AdminPages/editregistrationform', ['kars' => $kars,
-                                                        'patrulls' => $patrulls
-                                                        ]);
     }
 }
 

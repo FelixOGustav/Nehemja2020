@@ -19,7 +19,7 @@
                     <th class="tblheadcol def-vis-col" id="tbl-id">ID#</th>
                     <th class="tblheadcol def-vis-col" id="tbl-firstname">Förnamn</th>
                     <th class="tblheadcol def-vis-col" id="tbl-lastname">Efternamn</th>
-                    <th class="tblheadcol def-vis-col" id="tbl-place">Ort</th>
+                    <th class="tblheadcol def-vis-col" id="tbl-place">Patrull</th>
 
                     @can('age')
                         <th class="tblheadcol" id="tbl-age">Ålder</th>
@@ -92,9 +92,9 @@
                         <td>{{$reg->id}}</td>
                         <td>{{$reg->first_name}}</td>
                         <td>{{$reg->last_name}}</td>
-                        @foreach ($places as $place)
-                            @if($place->placeID == $reg->place)
-                                <td>{{$place->placename}}</td>
+                        @foreach ($patrulls as $patrull)
+                            @if($patrull->id == $reg->place)
+                                <td>{{$patrull->name}}</td>
                             @endif
                         @endforeach
                         
@@ -119,9 +119,9 @@
                         @can('member')
                             @if($reg->member)
                                 <td class="tblheadcol" id="tbl-edit">Medlem 
-                                    @foreach ($places as $place) 
-                                        @if($place->placeID == $reg->member_place) 
-                                        i {{$place->placename}} 
+                                    @foreach ($patrulls as $kar) 
+                                        @if($kar->id == $reg->member_place) 
+                                        i {{$kar->name}} 
                                         @endif 
                                     @endforeach
                                 </td>
