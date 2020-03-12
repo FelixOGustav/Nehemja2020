@@ -22,7 +22,9 @@ class CampRegistrationController extends Controller
         }
         
         $places = \App\place::orderBy('placename', 'ASC')->get();
-        return view('Pages/registration', ['places' => $places, 'key' => null]);
+        $patrulls = \App\patrull::orderBy('name', 'ASC')->get();
+        $kars = \App\kar::orderBy('name', 'ASC')->get();
+        return view('Pages/registration', ['places' => $places, 'kars' => $kars, 'patrulls' => $patrulls, 'key' => null]);
     }
 
     // Return view for leaders registration

@@ -46,11 +46,20 @@
                             </div>
                         </div>
                         <div>
-                            <label class="registerLabel" for="inputState">Vilken ort vill du åka med?</label>
-                            <select id="place" name="place" class="form-control"  required>
+                            <label class="registerLabel" for="inputState">Vilken kår vill du åka med?</label>
+                            <select id="kar" name="kar" class="form-control" required>
                                     <option value="">Välj...</option>
-                                @foreach($places as $place)
-                                    <option value="{{$place->placeID}}">{{$place->placename}}</option>
+                                @foreach($kars as $kar)
+                                    <option value="{{$kar->id}}">{{$kar->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div>
+                            <label class="registerLabel" for="inputState">Vilken patrull vill du åka med?</label>
+                            <select id="patrull" name="patrull" class="form-control" disabled required>
+                                    <option value="">Välj...</option>
+                                @foreach($patrulls as $patrull)
+                                    <option value="{{$patrull->id}}">{{$patrull->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -182,6 +191,27 @@
     </form>
     <!-- Reference to js helper-->
     <script src="{{URL::asset('js/registrationHelper.js')}}"></script>
-    
+    <script>
+        patrulls = @json($patrulls);
+
+        $(document).ready(function(){
+            $("#kar").change(function(){
+                var selectedKarId = $("#kar").val();
+                relatedPatrulls = patrulls.filter(function(patrull){
+                    return patrull.kar_id == selectedKarId;
+                });
+                var patrullsSelection = $("#patrull");
+                patrullsSelection.html('<option value="">Välj...</option>');
+                $.each(relatedPatrulls, function(index, patrull){
+                    patrullsSelection.append(
+                        $("<option>")
+                            .attr("value", patrull.kar_id)
+                            .text(patrull.name)
+                    )
+                })
+                patrullsSelection.prop('disabled', false);
+            });
+        });
+    </script>
 </div>                 
 @endsection
