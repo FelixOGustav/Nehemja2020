@@ -124,7 +124,7 @@
 
         <div class="footerBG row" style="margin: 0px;" id="footerId">
             <div class="col" style="margin-top: auto; margin-bottom: auto; text-align: center">
-                <a href="/contact" class="footerLink scaleFooterTextToMobile">Kontakt ><br><br></a>
+                <a href="/#KontaktInfo" class="footerLink scaleFooterTextToMobile">Kontakt ><br><br></a>
                 <a href="http://www.equmenia.se/" class="footerLink scaleFooterTextToMobile" style="color: white;" target="blank">Equmenia ></a> 
             </div>
 
