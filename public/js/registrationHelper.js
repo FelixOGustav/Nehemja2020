@@ -4,10 +4,9 @@ $('#formNextPage').click(function(){
         return;
 
     var foundFaults = false;
-    var allInputsForCurrentPage = $('.formPage.current input');
+    var allInputsForCurrentPage = $('.formPage.current input, select');
         allInputsForCurrentPage.each(function() {
-            if($(this).val().length <= 0 && $(this).attr("reqiered")){
-                console.log("found an invalid input")
+            if($(this).val().length <= 0 && $(this).attr("required")){
                 $(this).css("border-color", "red");
                 foundFaults = true;
             }
@@ -105,8 +104,17 @@ function CheckInputsEqualAdvocate(){
 }
 
 // Set border color to white on key up on any input in current form page
-$('.formPage.current input').keyup(function(){
+$('.formPage.current input').on("keyup", function(){
+    console.log("UP!");
     $(this).css("border-color", "#fff");
+});
+
+// Set border color to white on change on any select in current form page
+$('.formPage.current select').change(function(){
+    if($(this).val().length > 0)
+        $(this).css("border-color", "#fff");
+    else
+        $(this).css("border-color", "red");
 });
 
 // Check validity of personnummer.
