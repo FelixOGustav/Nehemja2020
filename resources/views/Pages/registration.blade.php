@@ -97,6 +97,7 @@
                             <div class="form-group container-fluid noPadding" >
                                     <label class="registerLabel" for="member">Är du med i en Equmeniaförening</label>
                                     <select id="memberPlace" name="memberPlace" class="form-control" required>
+                                            <option value="">Välj..</option>
                                             <option value="null">Nej, jag är inte medlem i någon Equmeniaförening</option>
                                         @foreach($places as $place)
                                             <option value="{{$place->placeID}}">Ja, jag är med i {{$place->placename}}</option>
@@ -148,7 +149,6 @@
                                     <ul>
                                         <li>TIDER SKA FÖLJAS</li>
                                         <li>LEDARNA ÄR DE SOM BESTÄMMER</li>
-                                        <li>KILLAR OCH TJEJER SOVER ÅTSKILJT </li>
                                         <li>DU SKA VARA MED På DE OBLIGATORISKA AKTIVITETERNA </li>
                                         <li>NOLLTOLERANS MOT ALKOHOL OCH DROGER</li>
                                         <li>DET GÅR EJ AVANMÄLAN EFTER SISTA ANMÄLNINGSDAGEN UTAN GILTIGT LÄKARINTYG </li>
@@ -162,17 +162,17 @@
                                     <h1 style=" color:#EAC15B;">Priset för lägret:<br>900kr</h1>
                                 </div>
                                 <div>
-                                        <p style=" color:#EAC15B; ">Jag vill ansöka om syskonrabatt</p>
-                                        <label class="switch">
-                                            <input type="checkbox" id="discount" name="discount" value="1">
-                                            <span class="slider round"></span>
-                                        </label>
-                                        </div>
+                                    <p style=" color:#EAC15B; ">Jag vill ansöka om syskonrabatt</p>
+                                    <label class="switch">
+                                        <input type="checkbox" id="discount" name="discount" value="1">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    </div>
                                 <div>
                                 <p style=" color:#EAC15B; ">Jag har läst förstått och godkänt vilkoren och <a href="https://equmenia.se/personuppgiftspolicy/" target="_blank">hanteringen</a> av personuppgifter inför lägret</p>
                                 <label class="switch">
                                     <input type="checkbox" id="terms" name="terms" value="1" required>
-                                    <span class="slider round"></span>
+                                    <span class="slider round" id="termsSlider"></span>
                                 </label>
                                 </div>
                             </div>

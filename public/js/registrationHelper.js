@@ -1,21 +1,25 @@
 // Move one page forward as long as current page is not "last"
-$('#formNextPage').click(function(){
-    if($(".formPage.current").attr("form-index") == "last")
-        return;
-
-    var foundFaults = false;
-    var allInputsForCurrentPage = $('.formPage.current input, select');
+$('#formNextPage').on('click', function(){
+    if($(".formPage.current").attr("form-index") == "last"){
+        if(!$("#terms").attr("checked")){
+            $('#termsSlider').css("background-color", "red");
+        }
+        return;    
+    }
+        
+        var foundFaults = false;
+        var allInputsForCurrentPage = $('.formPage.current input, .formPage.current select');
         allInputsForCurrentPage.each(function() {
             if($(this).val().length <= 0 && $(this).attr("required")){
                 $(this).css("border-color", "red");
                 foundFaults = true;
-            }
+            } 
         }
-    ); 
+        ); 
         
     if(foundFaults)
         return;
-
+        
     $(".progressbar > .active").last().next().toggleClass('active'); // sets next progressbar point to not active
 
     // Toggle current class to the next page
@@ -32,14 +36,13 @@ $('#formNextPage').click(function(){
     else if($(".formPage.current").attr("form-index") > "0"){
         $('#formPrevPage').css('display', "inherit");
     }    
-    
     event.preventDefault()
 });
 
 
 
 // Move one page forward as long as current page is not "0"
-$('#formPrevPage').click(function(){
+$('#formPrevPage').on('click', function(){
     if($(".formPage.current").attr("form-index") == "0")
         return;
 
@@ -64,61 +67,64 @@ $('#formPrevPage').click(function(){
 });
 
 
-
-// Detects a key change on input element with an id and calls CheckInputsEqual function
-$('#email').keyup(CheckInputsEqual); // Change to first email id
-$('#emailConfirm').keyup(CheckInputsEqual); // change to second email id
-
-// Checks if two input elements have the same value. If not, a btn will be disabled
-function CheckInputsEqual(){
-    var email = $('#email').val(); // Change to first email id
-    var repeatEmail = $('#emailConfirm').val(); // change to second email id
-
-    if(email == repeatEmail){
-        $('#formNextPage').removeAttr('disabled');
-        console.log("Enabling btn");
-    }
-    else{
-        $('#formNextPage').attr('disabled', true);
-        console.log("Disabling btn");
-    }
-}
-
-// Detects a key change on input element with an id and calls CheckInputsEqual function
-$('#emailAdvocate').keyup(CheckInputsEqualAdvocate); // Change to first email id
-$('#emailAdvocateConfirm').keyup(CheckInputsEqualAdvocate); // change to second email id
-
-// Checks if two input elements have the same value. If not, a btn will be disabled
-function CheckInputsEqualAdvocate(){
-    var email = $('#emailAdvocate').val(); // Change to first email id
-    var repeatEmail = $('#emailAdvocateConfirm').val(); // change to second email id
-
-    if(email == repeatEmail){
-        $('#formNextPage').removeAttr('disabled');
-        console.log("Enabling btn");
-    }
-    else{
-        $('#formNextPage').attr('disabled', true);
-        console.log("Disabling btn");
-    }
-}
-
 // Set border color to white on key up on any input in current form page
-$('.formPage.current input').on("keyup", function(){
-    console.log("UP!");
-    $(this).css("border-color", "#fff");
-});
+//$('.formPage.current input').on("keyup", function(){
+//    console.log("UP!");
+//    $(this).css("border-color", "#fff");
+//});
 
 // Set border color to white on change on any select in current form page
-$('.formPage.current select').change(function(){
-    if($(this).val().length > 0)
+$('input, select').on('change', function(){
+    if($(this).val().length > 0) {
         $(this).css("border-color", "#fff");
-    else
+    } else {
         $(this).css("border-color", "red");
+    }
+});
+
+// Detects a key change on input element with an id and calls CheckInputsEqual function
+$('#email').on('keyup', function(){
+    CheckInputsEqual($('#email'), $('#emailConfirm')) // Change to first email id
+});
+$('#emailConfirm').on('keyup', function(){
+    CheckInputsEqual($('#email'), $('#emailConfirm')) // change to second email id
+}); 
+
+$('#emailAdvocate').on('keyup', function(){
+    CheckInputsEqual($('#emailAdvocate'), $('#emailAdvocateConfirm')) // Change to first email id
+}); 
+$('#emailAdvocateConfirm').on('keyup', function(){
+    CheckInputsEqual($('#emailAdvocate'), $('#emailAdvocateConfirm')) // change to second email id
+}); 
+
+// Checks if two input elements have the same value. If not, a btn will be disabled
+function CheckInputsEqual(email, repeatEmail){
+    //var email = $('#email').val(); // Change to first email id
+    //var repeatEmail = $('#emailConfirm').val(); // change to second email id
+
+    if(email.val().length < 1 || repeatEmail.val().length < 1)
+        return;
+
+    if(email.val() == repeatEmail.val()){
+        $('#formNextPage').removeAttr('disabled');
+        $(email).css('border', 'inherit');
+        $(repeatEmail).css('border', 'inherit');
+    }
+    else{
+        $('#formNextPage').attr('disabled', true);
+        $(email).css('border', '2px solid red');
+        $(repeatEmail).css('border', '2px solid red');
+    }
+}
+
+$("#terms").on('change', function() {
+    if($(this).checked) {        
+        $('#termsSlider').css("background-color", "#ccc");
+    }
 });
 
 // Check validity of personnummer.
-$('#socialSecurityNumber').keyup(function(){
+$('#socialSecurityNumber').on('keyup', function(){
     var valid = isValidSwedishSSN($('#socialSecurityNumber').val());
     if(valid){
         $('#socialSecurityNumber').css('border', 'inherit');

@@ -45,10 +45,10 @@
     <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('js/randombibelord.js')}}"></script>
     <div id="wrapper" class="mobileScale">
-        <h1 style="text-align:center; font-size: 80px;">Explore 2019</h1>
+        <h1 style="text-align:center; font-size: 80px;">Nehemja 2020</h1>
         <br>
         <br>
-        <h1 style="vertical-align: middle; text-align: center;" class="greyColor">Oj, vad pinsamt... Vi är inte helt färdiga än...<br> Kom tillbaka  1 maj, för då öppnar anmälan. <br>Under tiden du väntar, <br>Har vi lämnat lite bibelord om just väntan.</h1>
+        <h1 style="vertical-align: middle; text-align: center;" class="greyColor">Oj, vad pinsamt... Vi är inte helt färdiga än...<br> Kom tillbaka senare, för då öppnar anmälan. <br>Under tiden du väntar, <br>Har vi lämnat lite bibelord om just väntan.</h1>
         <br>
         <br>
         <br>
